@@ -2,17 +2,21 @@
 import "./App.css";
 // on utilise CRACO pour bien organisé nous dossiers et maintenable
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import PublicRouter from "./pages/Public/PublicRouter";
+import AdminRouter from "./pages/Admin/AdminRouter";
 
 
-
+//  /* on dit pour le routeur il y a des routage derrière
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-       <PublicRouter />
+        <Routes>
+          <Route path="/*" element={<PublicRouter />} />
+          <Route path="/admin/*" element={<AdminRouter />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
