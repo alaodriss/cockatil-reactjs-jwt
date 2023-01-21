@@ -1,15 +1,19 @@
 import React from "react";
 
 import { Routes , Route } from "react-router-dom";
-import Home from "./Home";
+
+
+/*import Home from "./Home";
 import Service from "./Home";
 import Contact from "./Contact";
-import Error from "../../_utils/Error";
-import Layout from "./Layout";
+import Layout from "./Layout";*/
 
+import { Layout, Contact, Service, Home } from '../Public'
+
+import Error from "../../_utils/Error";
 // Optimisation du router
 
-const PublicRoute = () => {
+const PublicRouter = () => {
   return (
     <div>
       <Routes>
@@ -30,4 +34,4 @@ const PublicRoute = () => {
   );
 };
 
-export default PublicRoute;
+export default PublicRouter;
