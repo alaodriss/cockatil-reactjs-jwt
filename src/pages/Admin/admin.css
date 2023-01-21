@@ -1,0 +1,28 @@
+#admin {
+  display: flex;
+}
+.sidemenu {
+  flex-grow: 1;
+  border-right: solid 1px green;
+}
+
+#admin_body {
+  flex-grow: 6;
+  padding-left: 15px;
+}
+.Aheader {
+  text-align: center;
+  line-height: 50px;
+  background-color: grey;
+}
+
+/*****************************************/
+.sidemenu ul {
+  list-style: none;
+
+}
+
+.sidemenu ul li a {
+  text-decoration: none;
+  color: black;
+}
