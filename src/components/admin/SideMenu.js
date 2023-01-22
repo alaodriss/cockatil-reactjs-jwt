@@ -18,6 +18,9 @@ const SideMenu = () => {
             <Link to="/admin/user/index"> Liste </Link>
           </li>
           <li>
+            <Link to="/admin/user/edit"> Edit </Link>
+          </li>
+          <li>
             <Link to="/admin/user/add"> Ajouter </Link>
           </li>
         </ul>
