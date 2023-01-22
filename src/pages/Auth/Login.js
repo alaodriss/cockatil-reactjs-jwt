@@ -2,16 +2,28 @@ import React, { useState } from "react";
 import "./auth.css";
 
 const Login = () => {
+  // le state ce sont des var qui asyc entre le code et template
 
+  //const [login, setLogin] = useState("");
+  //const [password, setpassword] = useState("");
 
-    // le state ce sont des var qui asyc entre le code et template 
+  // pour plusieurs inputs  on fait un objet dans le state
 
-  const [login, setLogin] = useState("");
-  const [password, setpassword] = useState("");
+  const [credentials, setCredentials] = useState({
+    login: "",
+    password: "",
+  });
+
+  // on fait la differance des values entre inputs avec le name de chaque inpute
+  const onChange = (e) => {
+    setCredentials({ 
+         ...credentials, //etat inital 
+         [e.target.name]: e.target.value }); // onfision
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("kika");
+    console.log(credentials);
   };
 
   return (
@@ -21,8 +33,8 @@ const Login = () => {
         <input
           type="text"
           name="login"
-          value={login}
-          onChange={(e) => setLogin(e.target.value)}
+          value={credentials.login}
+          onChange={onChange}
         />
       </div>
       <div className="group">
@@ -30,8 +42,8 @@ const Login = () => {
         <input
           type="text"
           name="password"
-          value={password}
-          onChange={(e) => setpassword(e.target.value)}
+          value={credentials.password}
+          onChange={onChange}
         />
       </div>
       <div className="group">
