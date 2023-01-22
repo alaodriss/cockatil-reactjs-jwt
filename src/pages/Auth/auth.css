@@ -1,0 +1,15 @@
+
+form{
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.groupe {
+    margin-bottom: 25px;
+}
+label{
+    display: block;
+}
+button{
+    width: 100%;
+}

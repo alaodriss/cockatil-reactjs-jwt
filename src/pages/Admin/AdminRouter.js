@@ -15,6 +15,7 @@ const AdminRouter = () => {
         {/* Route Nested et ALayout Admin */}
 
         <Route element={<ALayout />}>
+          <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="user">
             <Route path="index" element={<User />} />
